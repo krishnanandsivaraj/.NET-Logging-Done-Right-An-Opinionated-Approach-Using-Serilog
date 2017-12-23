@@ -7,8 +7,10 @@ namespace Flogging.Core
         : IContainLocationLogInfo, IContainUserLogInfo, IContainErrorLogInfo,
         IContainPerformanceLogInfo, IContainAddionalLogInfo
     {
-        public FullLogDetail()
-            => Timestamp = DateTime.Now;
+        public FullLogDetail() {
+            Timestamp = DateTime.Now;
+            AdditionalInfo = new Dictionary<string, object>();
+        }
 
         #region General
         public DateTime Timestamp { get; }
