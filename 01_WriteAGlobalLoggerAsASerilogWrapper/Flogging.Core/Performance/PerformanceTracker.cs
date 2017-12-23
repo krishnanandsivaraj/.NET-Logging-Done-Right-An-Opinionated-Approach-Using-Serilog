@@ -13,6 +13,7 @@ namespace Flogging.Core.Performance
             string product, string layer)
         {
             _stopwatch = new Stopwatch();
+            _stopwatch.Start();
 
             _fullLogDetail = new FullLogDetail {
                 Message = name,
